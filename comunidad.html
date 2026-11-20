@@ -79,37 +79,28 @@
             </aside>
 
             <section class="feed-results o-stack" aria-label="Resultados de rutinas">
-                <p class="feed-results__count">1 rutina disponible · Lista completa</p>
+                <p class="feed-results__count" id="rutinas-count"></p>
 
-                <article class="card card--featured o-stack">
-                    <label class="slot">
-                        <input class="slot__input" type="radio" name="selected-routine" value="pecho-triceps" checked>
-                        Rutina seleccionada
-                    </label>
+                <ul class="o-grid" id="rutinas-list" role="list"></ul>
 
-                    <header class="card__header-block">
-                        <h2 class="card__title">PECHO &amp; TRÍCEPS (Fuerza y Volumen)</h2>
-                        <p class="card__tag">Push Day · Intermedio</p>
-                    </header>
+                <template id="rutina-card-template">
+                    <li>
+                        <article class="card o-stack">
+                            <header class="card__header-block">
+                                <p class="card__tag"></p>
+                                <h2 class="card__title"></h2>
+                            </header>
 
-                    <ol class="card__list">
-                        <li>Press de Banca Plano</li>
-                        <li>Press inclinado con Mancuerna</li>
-                        <li>Fondos en Paralelas</li>
-                    </ol>
+                            <ol class="card__list"></ol>
 
-                    <footer class="card__footer">
-                        <p class="card__author">Creado por @KevinBH</p>
-                        <p class="card__meta">86 valoraciones · 86 guardados</p>
-                    </footer>
-                </article>
-
-                <aside class="selection-bar o-stack" aria-label="Acción de rutina seleccionada">
-                    <p class="selection-bar__label">Seleccionada: PECHO &amp; TRÍCEPS (Fuerza y Volumen)</p>
-                    <a href="detalle-rutina.html" class="button button--block">Ver rutina seleccionada</a>
-                </aside>
-
-                <p class="feed-results__end">Has visto todas las rutinas disponibles.</p>
+                            <footer class="card__footer o-stack">
+                                <p class="card__author"></p>
+                                <p class="card__meta"></p>
+                                <a href="#" class="button button--secondary button--block card__link">Ver ficha completa</a>
+                            </footer>
+                        </article>
+                    </li>
+                </template>
             </section>
         </section>
     </section>
