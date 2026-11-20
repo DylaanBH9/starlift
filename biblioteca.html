@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>Biblioteca · Starlift</title>
+    <meta name="description" content="Tus rutinas guardadas, listas para entrenar.">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<header class="header o-container">
+    <a href="index.html" class="header__logo">STARLIFT</a>
+
+    <menu class="header__user o-cluster" role="list">
+        <li>
+            <button type="button" class="icon-button" aria-label="Notificaciones">
+                <span aria-hidden="true">🔔</span>
+            </button>
+        </li>
+        <li><a href="biblioteca.html" class="user-badge">@KevinBH</a></li>
+    </menu>
+</header>
+
+<main class="app-shell o-container">
+    <aside class="sidebar o-stack" aria-label="Menú de aplicación">
+        <nav class="side-nav" aria-label="Secciones principales">
+            <ul class="side-nav__list o-stack" role="list">
+                <li><a href="comunidad.html" class="button button--secondary button--block">Inicio</a></li>
+                <li><a href="comunidad.html" class="button button--secondary button--block">Explorar</a></li>
+                <li><a href="crear-rutina.html" class="button button--secondary button--block">Crear Rutina</a></li>
+                <li><a href="biblioteca.html" class="button button--block" aria-current="page">Biblioteca</a></li>
+                <li><a href="biblioteca.html" class="button button--secondary button--block">Mi Perfil</a></li>
+            </ul>
+        </nav>
+        <p class="sidebar__context">Comunidad</p>
+    </aside>
+
+    <section class="app-shell__main o-stack" aria-labelledby="library-heading">
+        <header class="page-header">
+            <h1 id="library-heading">Biblioteca</h1>
+            <p class="page-header__subtitle">Tus rutinas guardadas, listas para entrenar.</p>
+        </header>
+
+        <section class="feed-layout" aria-label="Gestor de rutinas guardadas">
+            <aside class="filter-panel o-stack" aria-labelledby="library-filter-heading">
+                <h2 id="library-filter-heading">Tu biblioteca</h2>
+
+                <form class="o-stack">
+                    <p class="field">
+                        <label class="field__label" for="search-library">Buscar rutinas guardadas</label>
+                        <input class="input" type="search" id="search-library" name="q" placeholder="Buscar en tu biblioteca...">
+                    </p>
+
+                    <fieldset class="o-stack">
+                        <legend class="u-visually-hidden">Filtrar por origen</legend>
+                        <label class="slot">
+                            <input class="slot__input" type="radio" name="origin" value="all" checked>
+                            Todas (3) · Seleccionado
+                        </label>
+                        <label class="choice">
+                            <input class="choice__control" type="radio" name="origin" value="mine">
+                            Mis rutinas (1)
+                        </label>
+                        <label class="choice">
+                            <input class="choice__control" type="radio" name="origin" value="community">
+                            Comunidad (2)
+                        </label>
+                    </fieldset>
+
+                    <p class="field">
+                        <label class="field__label" for="sort-library">Ordenar por</label>
+                        <select class="input" id="sort-library" name="sort">
+                            <option value="recent" selected>Más recientes</option>
+                            <option value="name">Nombre</option>
+                        </select>
+                    </p>
+                </form>
+
+                <a href="crear-rutina.html" class="button button--block">+ Crear rutina</a>
+            </aside>
+
+            <section class="feed-results o-stack" aria-label="Listado de rutinas guardadas">
+                <p class="feed-results__count">3 rutinas guardadas</p>
+
+                <ul class="o-stack" role="list">
+                    <li>
+                        <article class="card card--featured o-stack">
+                            <label class="slot">
+                                <input class="slot__input" type="radio" name="library-selected" value="pecho" checked>
+                                Rutina seleccionada
+                            </label>
+                            <h2 class="card__title">PECHO &amp; TRÍCEPS (Fuerza y Volumen)</h2>
+                            <p class="card__tag">Push Day · Intermedio</p>
+                            <p class="card__author">Creada por ti · Actualizado hace 3 días</p>
+                            <p class="card__meta">3 ejercicios · 10 series · 45 min</p>
+                            <ul class="card__list" role="list">
+                                <li>Press de Banca Plano</li>
+                                <li>Press inclinado con Mancuerna</li>
+                                <li>Fondos en Paralelas</li>
+                            </ul>
+                            <footer class="o-stack">
+                                <a href="detalle-rutina.html" class="button button--secondary button--block">Ver detalles →</a>
+                                <a href="crear-rutina.html" class="card__action-link">Editar rutina</a>
+                            </footer>
+                        </article>
+                    </li>
+
+                    <li>
+                        <article class="card o-stack">
+                            <label class="choice">
+                                <input class="choice__control" type="radio" name="library-selected" value="espalda">
+                                Seleccionar rutina
+                            </label>
+                            <h2 class="card__title">ESPALDA &amp; BÍCEPS (Fuerza y Control)</h2>
+                            <p class="card__tag">Pull Day · Intermedio</p>
+                            <p class="card__author">Creada por @carlos_lifting · Guardada hace 2 días</p>
+                            <p class="card__meta">3 ejercicios · 10 series · 50 min</p>
+                            <ul class="card__list" role="list">
+                                <li>Dominadas</li>
+                                <li>Remo con barra</li>
+                                <li>Curl con mancuernas</li>
+                            </ul>
+                            <footer class="o-stack">
+                                <a href="detalle-rutina.html" class="button button--secondary button--block">Ver detalles →</a>
+                                <button type="button" class="button button--danger">Quitar de Biblioteca</button>
+                                <p class="field__hint">No elimina la rutina original.</p>
+                            </footer>
+                        </article>
+                    </li>
+
+                    <li>
+                        <article class="card o-stack">
+                            <label class="choice">
+                                <input class="choice__control" type="radio" name="library-selected" value="pierna">
+                                Seleccionar rutina
+                            </label>
+                            <h2 class="card__title">PIERNA &amp; CORE (Base de Fuerza)</h2>
+                            <p class="card__tag">Leg Day · Intermedio</p>
+                            <p class="card__author">Creada por @ucia_fit · Guardada hace 5 días</p>
+                            <p class="card__meta">3 ejercicios · 11 series · 55 min</p>
+                            <ul class="card__list" role="list">
+                                <li>Sentadilla</li>
+                                <li>Peso muerto rumano</li>
+                                <li>Plancha abdominal</li>
+                            </ul>
+                            <footer class="o-stack">
+                                <a href="detalle-rutina.html" class="button button--secondary button--block">Ver detalles →</a>
+                                <button type="button" class="button button--danger">Quitar de Biblioteca</button>
+                                <p class="field__hint">No elimina la rutina original.</p>
+                            </footer>
+                        </article>
+                    </li>
+                </ul>
+
+                <aside class="selection-bar o-stack" aria-label="Iniciar entrenamiento">
+                    <p class="selection-bar__label">Seleccionada: PECHO &amp; TRÍCEPS (Fuerza y Volumen)</p>
+                    <a href="tracker.html" class="button button--block">Empezar rutina seleccionada</a>
+                </aside>
+            </section>
+        </section>
+    </section>
+</main>
+
+</body>
+</html>

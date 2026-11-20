@@ -1,0 +1,7 @@
+@use "../tools/functions" as *;
+
+$breakpoints: (
+        "sm": rem(576px),
+        "md": rem(768px),
+        "lg": rem(1024px)
+);

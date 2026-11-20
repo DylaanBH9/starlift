@@ -1,0 +1,19 @@
+@use "sass:meta";
+
+@layer settings, generic, elements, objects, components, utilities;
+
+@layer settings   { @include meta.load-css("settings/custom-properties"); }
+@layer generic    { @include meta.load-css("generic/reset"); }
+@layer elements   {
+  @include meta.load-css("elements/page");
+  @include meta.load-css("elements/headings");
+  @include meta.load-css("elements/links");
+}
+@layer objects    {
+  @include meta.load-css("objects/container");
+  @include meta.load-css("objects/stack");
+  @include meta.load-css("objects/cluster");
+  @include meta.load-css("objects/grid");
+}
+@layer components { @include meta.load-css("components/index"); }
+@layer utilities  { @include meta.load-css("utilities/visually-hidden"); }

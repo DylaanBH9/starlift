@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>Rutinas de la comunidad · Starlift</title>
+    <meta name="description" content="Busca un entrenamiento y revisa sus ejercicios antes de empezar.">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<header class="header o-container">
+    <a href="index.html" class="header__logo">STARLIFT</a>
+
+    <menu class="header__user o-cluster" role="list">
+        <li>
+            <button type="button" class="icon-button" aria-label="Notificaciones">
+                <span aria-hidden="true">🔔</span>
+            </button>
+        </li>
+        <li><a href="biblioteca.html" class="user-badge">@KevinBH</a></li>
+    </menu>
+</header>
+
+<main class="app-shell o-container">
+    <aside class="sidebar o-stack" aria-label="Menú de aplicación">
+        <nav class="side-nav" aria-label="Secciones principales">
+            <ul class="side-nav__list o-stack" role="list">
+                <li><a href="comunidad.html" class="button button--block" aria-current="page">Inicio</a></li>
+                <li><a href="comunidad.html" class="button button--secondary button--block">Explorar</a></li>
+                <li><a href="crear-rutina.html" class="button button--secondary button--block">Crear Rutina</a></li>
+                <li><a href="biblioteca.html" class="button button--secondary button--block">Biblioteca</a></li>
+                <li><a href="biblioteca.html" class="button button--secondary button--block">Mi Perfil</a></li>
+            </ul>
+        </nav>
+        <p class="sidebar__context">Comunidad</p>
+    </aside>
+
+    <section class="app-shell__main o-stack" aria-labelledby="feed-heading">
+        <header class="page-header">
+            <h1 id="feed-heading">Rutinas de la comunidad</h1>
+            <p class="page-header__subtitle">Busca un entrenamiento y revisa sus ejercicios antes de empezar.</p>
+        </header>
+
+        <section class="feed-layout" aria-label="Explorador de rutinas">
+            <aside class="filter-panel o-stack" aria-labelledby="filters-heading">
+                <h2 class="filter-panel__title" id="filters-heading">Filtros</h2>
+
+                <form class="o-stack">
+                    <p class="field">
+                        <label class="field__label" for="search-routine">Buscar rutinas o ejercicios</label>
+                        <input class="input" type="search" id="search-routine" name="q" placeholder="Buscar en la comunidad...">
+                    </p>
+
+                    <p class="field">
+                        <label class="field__label" for="workout-type">Tipo de entrenamiento</label>
+                        <select class="input" id="workout-type" name="type">
+                            <option value="">Todos los tipos</option>
+                            <option value="push">Push Day</option>
+                            <option value="pull">Pull Day</option>
+                            <option value="legs">Leg Day</option>
+                        </select>
+                    </p>
+
+                    <p class="field">
+                        <label class="field__label" for="workout-level">Nivel</label>
+                        <select class="input" id="workout-level" name="level">
+                            <option value="">Todos los niveles</option>
+                            <option value="principiante">Principiante</option>
+                            <option value="intermedio">Intermedio</option>
+                            <option value="avanzado">Avanzado</option>
+                        </select>
+                    </p>
+                </form>
+
+                <p class="field__hint">Selecciona una rutina para consultar sus detalles.</p>
+            </aside>
+
+            <section class="feed-results o-stack" aria-label="Resultados de rutinas">
+                <p class="feed-results__count">1 rutina disponible · Lista completa</p>
+
+                <article class="card card--featured o-stack">
+                    <label class="slot">
+                        <input class="slot__input" type="radio" name="selected-routine" value="pecho-triceps" checked>
+                        Rutina seleccionada
+                    </label>
+
+                    <header class="card__header-block">
+                        <h2 class="card__title">PECHO &amp; TRÍCEPS (Fuerza y Volumen)</h2>
+                        <p class="card__tag">Push Day · Intermedio</p>
+                    </header>
+
+                    <ol class="card__list">
+                        <li>Press de Banca Plano</li>
+                        <li>Press inclinado con Mancuerna</li>
+                        <li>Fondos en Paralelas</li>
+                    </ol>
+
+                    <footer class="card__footer">
+                        <p class="card__author">Creado por @KevinBH</p>
+                        <p class="card__meta">86 valoraciones · 86 guardados</p>
+                    </footer>
+                </article>
+
+                <aside class="selection-bar o-stack" aria-label="Acción de rutina seleccionada">
+                    <p class="selection-bar__label">Seleccionada: PECHO &amp; TRÍCEPS (Fuerza y Volumen)</p>
+                    <a href="detalle-rutina.html" class="button button--block">Ver rutina seleccionada</a>
+                </aside>
+
+                <p class="feed-results__end">Has visto todas las rutinas disponibles.</p>
+            </section>
+        </section>
+    </section>
+</main>
+
+</body>
+</html>

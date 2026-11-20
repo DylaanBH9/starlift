@@ -1,0 +1,16 @@
+# Dependencias de Node / npm (Sass, ESLint)
+node_modules/
+
+# Logs y caché de herramientas
+npm-debug.log*
+*.log
+.eslintcache
+
+# Mapas de origen de Sass (para no ensuciar commits al usar npm run dev)
+css/*.map
+
+# Archivos del sistema (macOS)
+.DS_Store
+
+# Configuración del IDE (IntelliJ / WebStorm)
+.idea/

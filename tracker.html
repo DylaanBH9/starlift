@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>Modo Tracker · Press de Banca Plano · Starlift</title>
+    <meta name="description" content="Sigue tu entrenamiento en tiempo real con las notas técnicas fijadas.">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<header class="header o-container">
+    <a href="index.html" class="header__logo">STARLIFT</a>
+
+    <menu class="header__user o-cluster" role="list">
+        <li>
+            <button type="button" class="icon-button" aria-label="Notificaciones">
+                <span aria-hidden="true">🔔</span>
+            </button>
+        </li>
+        <li><a href="biblioteca.html" class="user-badge">@KevinBH</a></li>
+    </menu>
+</header>
+
+<main class="main o-container o-stack">
+    <header class="tracker-status">
+        <p class="tracker-status__badge">✓ Modo Tracker activo</p>
+        <p class="tracker-status__routine">PECHO &amp; TRÍCEPS (Fuerza y Volumen)</p>
+    </header>
+
+    <section class="detail-layout" aria-label="Entrenamiento en curso">
+        <section class="tracker-exercise o-stack" aria-labelledby="current-exercise">
+            <header>
+                <p class="tracker-exercise__step">Ejercicio 1 de 3</p>
+                <h1 id="current-exercise">Press de Banca Plano</h1>
+            </header>
+
+            <details class="tracker-note" open>
+                <summary class="tracker-note__summary">Nota técnica fijada por @kevinbh</summary>
+                <p class="tracker-note__text">
+                    Espalda bien apoyada en el banco. Controla la bajada en 2 segundos y evita usar impulso con la cadera al subir.
+                </p>
+            </details>
+
+            <article class="card o-stack" aria-labelledby="current-set-heading">
+                <h2 id="current-set-heading">Serie en curso</h2>
+                <p class="tracker-exercise__set-count">Serie 1 de 4</p>
+
+                <dl class="set-metrics">
+                    <dt>Repeticiones</dt>
+                    <dd>8–10</dd>
+                    <dt>Carga</dt>
+                    <dd>80 kg</dd>
+                </dl>
+            </article>
+
+            <button type="button" class="button button--block">Marcar serie como completada</button>
+
+            <footer class="tracker-exercise__footer o-cluster">
+                <a href="#">Ayuda</a>
+                <a href="comunidad.html">Salir al Feed</a>
+            </footer>
+        </section>
+
+        <aside class="summary-card o-stack" aria-labelledby="session-heading">
+            <h2 id="session-heading">Sesión</h2>
+            <p class="summary-card__hint">Tiempo transcurrido</p>
+            <p class="session-timer"><time datetime="PT24S">00:00:24</time></p>
+            <p class="summary-card__stats">0 de 10 series completadas</p>
+            <progress value="0" max="10" aria-label="Progreso de series">0 de 10</progress>
+            <p class="summary-card__meta">Ejercicio 1 de 3 · Serie 1 de 4</p>
+            <p class="summary-card__tag">Push Day · Intermedio</p>
+        </aside>
+    </section>
+</main>
+
+</body>
+</html>

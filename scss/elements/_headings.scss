@@ -1,0 +1,13 @@
+h1, h2, h3 {
+  margin: 0;
+  text-wrap: balance;
+}
+
+h1 { font: var(--font-heading-1); }
+h2 { font: var(--font-heading-2); }
+h3 { font: var(--font-heading-3); }
+
+p {
+  margin: 0;
+  text-wrap: pretty;
+}

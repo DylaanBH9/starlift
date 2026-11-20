@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>Starlift · Entrena sin dudas</title>
+    <meta name="description" content="Crea, comparte y puntúa rutinas. Cuida tu técnica con las notas de tus compañeros.">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<header class="header o-container">
+    <a href="index.html" class="header__logo">STARLIFT</a>
+
+    <nav class="main-nav" aria-label="Principal">
+        <ul class="main-nav__list o-cluster" role="list">
+            <li><a href="#caracteristicas" class="main-nav__link">Características</a></li>
+            <li><a href="comunidad.html" class="main-nav__link">Comunidades</a></li>
+            <li><a href="tracker.html" class="main-nav__link main-nav__link--muted">Gym Tracker</a></li>
+        </ul>
+    </nav>
+
+    <menu class="header__actions o-cluster" role="list">
+        <li><a href="login.html" class="button button--secondary">Iniciar sesión</a></li>
+        <li><a href="login.html" class="button">Comienzo gratis</a></li>
+    </menu>
+</header>
+
+<main class="main o-container o-stack">
+    <section class="hero" aria-labelledby="hero-heading">
+        <article class="hero__content o-stack">
+            <p class="hero__eyebrow">ENTRENA · COMPARTE · PROGRESA</p>
+            <h1 class="hero__title" id="hero-heading">Entrena sin dudas. Respaldado por tu comunidad</h1>
+            <p class="hero__description">
+                Crea, comparte y puntúa rutinas. Cuida tu técnica con las notas de tus compañeros y sigue tu entrenamiento sin perder el ritmo.
+            </p>
+            <menu class="hero__actions o-stack" role="list">
+                <li><a href="login.html" class="button button--block">Empieza gratis</a></li>
+                <li><a href="login.html" class="button button--secondary button--block">Iniciar sesión</a></li>
+            </menu>
+        </article>
+
+        <aside class="tracker-preview o-stack" aria-label="Vista previa del modo tracker">
+            <header class="tracker-preview__header">
+                <p class="tracker-preview__label">VISTA PREVIA · MODO TRACKER</p>
+                <p class="tracker-preview__step">Ejercicio 1 de 3</p>
+                <h2 class="tracker-preview__title">Press de Banca Plano</h2>
+            </header>
+
+            <details class="tracker-preview__note" open>
+                <summary class="tracker-preview__toggle">Nota técnica</summary>
+                <p class="tracker-preview__note-text">
+                    Espalda bien apoyada en el banco. Controla la fase excéntrica en 2 segundos.
+                </p>
+            </details>
+
+            <footer class="tracker-preview__footer">
+                <p class="tracker-preview__sets">Serie 1 de 4 · 8–10 reps · 80 kg</p>
+                <p class="tracker-preview__caption">La técnica, siempre junto al ejercicio.</p>
+            </footer>
+        </aside>
+    </section>
+
+    <section class="routines o-stack" id="comunidades" aria-labelledby="routines-heading">
+        <header class="routines__header">
+            <h2 class="routines__title" id="routines-heading">Rutinas compartidas, a tu alcance</h2>
+            <p class="routines__subtitle">
+                Explora los ejercicios y las valoraciones de la comunidad antes de elegir tu entrenamiento.
+            </p>
+        </header>
+
+        <ul class="o-grid" role="list">
+            <li>
+                <article class="card">
+                    <h3 class="card__title">Pecho y tríceps (Push Day)</h3>
+                    <ol class="card__list">
+                        <li>Press de Banca Plano</li>
+                        <li>Press inclinado con Mancuerna</li>
+                        <li>Fondos en Paralelas</li>
+                    </ol>
+                    <p class="card__meta">86 valoraciones</p>
+                </article>
+            </li>
+            <li>
+                <article class="card">
+                    <h3 class="card__title">Rutina de piernas (Fuerza)</h3>
+                    <ol class="card__list">
+                        <li>Sentadilla trasera</li>
+                        <li>Prensa de piernas</li>
+                        <li>Extensión de piernas</li>
+                    </ol>
+                    <p class="card__meta">4.2/5 · 16 valoraciones</p>
+                </article>
+            </li>
+            <li>
+                <article class="card">
+                    <h3 class="card__title">Rutina de espalda (Hipertrofia)</h3>
+                    <ol class="card__list">
+                        <li>Dominadas</li>
+                        <li>Jalones</li>
+                        <li>Remo</li>
+                    </ol>
+                    <p class="card__meta">4.8/5 · 52 valoraciones</p>
+                </article>
+            </li>
+        </ul>
+    </section>
+
+    <section class="highlight" id="caracteristicas" aria-labelledby="highlight-heading">
+        <article class="highlight__card o-stack">
+            <h2 class="highlight__title" id="highlight-heading">Deja de dudar en cada repetición</h2>
+            <p class="highlight__text">
+                El Tracker muestra el ejercicio actual con los consejos, técnicas y notas clave del creador fijados arriba. Sigue tus entrenamientos sin perder el ritmo, sin audios eternos ni pausas para recordar cómo se hacía.
+            </p>
+        </article>
+    </section>
+</main>
+
+<footer class="footer o-container">
+    <nav class="footer-nav" aria-label="Legal">
+        <ul class="footer-nav__list o-cluster" role="list">
+            <li><a href="#" class="footer-nav__link">Privacidad</a></li>
+            <li><a href="#" class="footer-nav__link">Términos</a></li>
+        </ul>
+    </nav>
+    <p class="footer__copyright">© 2026 StarLift. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>

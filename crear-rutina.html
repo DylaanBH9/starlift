@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>Crear rutina · Starlift</title>
+    <meta name="description" content="Diseña tu entrenamiento, define series, repeticiones y notas técnicas.">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<header class="header o-container">
+    <a href="index.html" class="header__logo">STARLIFT</a>
+
+    <menu class="header__user o-cluster" role="list">
+        <li>
+            <button type="button" class="icon-button" aria-label="Notificaciones">
+                <span aria-hidden="true">🔔</span>
+            </button>
+        </li>
+        <li><a href="biblioteca.html" class="user-badge">@KevinBH</a></li>
+    </menu>
+</header>
+
+<main class="app-shell o-container">
+    <aside class="sidebar o-stack" aria-label="Menú de aplicación">
+        <nav class="side-nav" aria-label="Secciones principales">
+            <ul class="side-nav__list o-stack" role="list">
+                <li><a href="comunidad.html" class="button button--secondary button--block">Inicio</a></li>
+                <li><a href="comunidad.html" class="button button--secondary button--block">Explorar</a></li>
+                <li><a href="crear-rutina.html" class="button button--block" aria-current="page">Crear Rutina</a></li>
+                <li><a href="biblioteca.html" class="button button--secondary button--block">Biblioteca</a></li>
+                <li><a href="biblioteca.html" class="button button--secondary button--block">Mi Perfil</a></li>
+            </ul>
+        </nav>
+        <p class="sidebar__context">Comunidad</p>
+    </aside>
+
+    <section class="app-shell__main o-stack" aria-labelledby="create-heading">
+        <header class="page-header">
+            <h1 id="create-heading">Crear rutina</h1>
+            <p class="page-header__subtitle">Diseña tu entrenamiento y guárdalo en tu biblioteca.</p>
+        </header>
+
+        <form action="biblioteca.html" method="get" class="detail-layout">
+            <section class="detail-layout__primary o-stack" aria-label="Datos y ejercicios de la rutina">
+                <fieldset class="card o-stack">
+                    <legend class="card__title">Información de la rutina</legend>
+
+                    <p class="field">
+                        <label class="field__label" for="routine-name">Nombre de la rutina</label>
+                        <input class="input" type="text" id="routine-name" name="name" value="PECHO &amp; TRÍCEPS (Fuerza y Volumen)" required>
+                    </p>
+
+                    <p class="field">
+                        <label class="field__label" for="routine-desc">Descripción</label>
+                        <input class="input" type="text" id="routine-desc" name="description" value="Rutina de empuje para trabajar pecho y tríceps con foco en fuerza y volumen.">
+                    </p>
+
+                    <section class="o-grid" aria-label="Clasificación de la rutina">
+                        <p class="field">
+                            <label class="field__label" for="routine-type">Tipo de entrenamiento</label>
+                            <select class="input" id="routine-type" name="type">
+                                <option value="push" selected>Push Day</option>
+                                <option value="pull">Pull Day</option>
+                                <option value="legs">Leg Day</option>
+                            </select>
+                        </p>
+
+                        <p class="field">
+                            <label class="field__label" for="routine-level">Nivel</label>
+                            <select class="input" id="routine-level" name="level">
+                                <option value="principiante">Principiante</option>
+                                <option value="intermedio" selected>Intermedio</option>
+                                <option value="avanzado">Avanzado</option>
+                            </select>
+                        </p>
+
+                        <p class="field">
+                            <label class="field__label" for="routine-duration">Duración estimada</label>
+                            <input class="input" type="text" id="routine-duration" name="duration" value="45 min">
+                        </p>
+                    </section>
+                </fieldset>
+
+                <section class="o-stack" aria-labelledby="builder-exercises">
+                    <header>
+                        <h2 id="builder-exercises">Ejercicios</h2>
+                        <p class="field__hint">Define las series, repeticiones y el descanso. Usa Subir y Bajar para cambiar el orden.</p>
+                    </header>
+
+                    <article class="card o-stack">
+                        <h3>1. Press de Banca Plano</h3>
+                        <section class="o-grid" aria-label="Parámetros ejercicio 1">
+                            <p class="field">
+                                <label class="field__label" for="ex1-sets">Series</label>
+                                <input class="input" type="number" id="ex1-sets" name="ex1_sets" value="4">
+                            </p>
+                            <p class="field">
+                                <label class="field__label" for="ex1-reps">Repeticiones</label>
+                                <input class="input" type="text" id="ex1-reps" name="ex1_reps" value="8-10">
+                            </p>
+                            <p class="field">
+                                <label class="field__label" for="ex1-rest">Descanso</label>
+                                <input class="input" type="text" id="ex1-rest" name="ex1_rest" value="90 s">
+                            </p>
+                        </section>
+                        <p class="field">
+                            <label class="field__label" for="ex1-note">Nota técnica</label>
+                            <input class="input" type="text" id="ex1-note" name="ex1_note" value="Mantén las escápulas retraídas durante el press.">
+                        </p>
+                        <menu class="o-cluster" role="list">
+                            <li><button type="button" class="button button--secondary">↓ Bajar</button></li>
+                            <li><button type="button" class="button button--danger">Quitar ejercicio</button></li>
+                        </menu>
+                    </article>
+
+                    <article class="card o-stack">
+                        <h3>2. Press inclinado con Mancuerna</h3>
+                        <section class="o-grid" aria-label="Parámetros ejercicio 2">
+                            <p class="field">
+                                <label class="field__label" for="ex2-sets">Series</label>
+                                <input class="input" type="number" id="ex2-sets" name="ex2_sets" value="3">
+                            </p>
+                            <p class="field">
+                                <label class="field__label" for="ex2-reps">Repeticiones</label>
+                                <input class="input" type="text" id="ex2-reps" name="ex2_reps" value="10">
+                            </p>
+                            <p class="field">
+                                <label class="field__label" for="ex2-rest">Descanso</label>
+                                <input class="input" type="text" id="ex2-rest" name="ex2_rest" value="90 s">
+                            </p>
+                        </section>
+                        <p class="field">
+                            <label class="field__label" for="ex2-note">Nota técnica</label>
+                            <input class="input" type="text" id="ex2-note" name="ex2_note" placeholder="Sin nota técnica">
+                        </p>
+                        <menu class="o-cluster" role="list">
+                            <li><button type="button" class="button button--secondary">↑ Subir</button></li>
+                            <li><button type="button" class="button button--secondary">↓ Bajar</button></li>
+                            <li><button type="button" class="button button--danger">Quitar ejercicio</button></li>
+                        </menu>
+                    </article>
+
+                    <article class="card o-stack">
+                        <h3>3. Fondos en Paralelas</h3>
+                        <section class="o-grid" aria-label="Parámetros ejercicio 3">
+                            <p class="field">
+                                <label class="field__label" for="ex3-sets">Series</label>
+                                <input class="input" type="number" id="ex3-sets" name="ex3_sets" value="3">
+                            </p>
+                            <p class="field">
+                                <label class="field__label" for="ex3-reps">Repeticiones</label>
+                                <input class="input" type="text" id="ex3-reps" name="ex3_reps" value="Al fallo">
+                            </p>
+                            <p class="field">
+                                <label class="field__label" for="ex3-rest">Descanso</label>
+                                <input class="input" type="text" id="ex3-rest" name="ex3_rest" value="60 s">
+                            </p>
+                        </section>
+                        <p class="field">
+                            <label class="field__label" for="ex3-note">Nota técnica</label>
+                            <input class="input" type="text" id="ex3-note" name="ex3_note" placeholder="Sin nota técnica">
+                        </p>
+                        <menu class="o-cluster" role="list">
+                            <li><button type="button" class="button button--secondary">↑ Subir</button></li>
+                            <li><button type="button" class="button button--danger">Quitar ejercicio</button></li>
+                        </menu>
+                    </article>
+
+                    <button type="button" class="button button--secondary button--block">+ Añadir ejercicio</button>
+                </section>
+            </section>
+
+            <aside class="summary-card o-stack" aria-labelledby="save-summary-heading">
+                <h2 id="save-summary-heading">Resumen y guardado</h2>
+                <p class="summary-card__stats">3 ejercicios · 10 series · 45 min</p>
+
+                <fieldset class="o-stack">
+                    <legend class="field__label">Visibilidad</legend>
+                    <label class="slot">
+                        <input class="slot__input" type="radio" name="visibility" value="public" checked>
+                        Pública · Seleccionado
+                    </label>
+                    <label class="choice">
+                        <input class="choice__control" type="radio" name="visibility" value="private">
+                        Privada · Solo tú
+                    </label>
+                </fieldset>
+
+                <p class="field__hint">Al guardar como pública, la comunidad podrá ver esta rutina. Elige Privada si no quieres compartirla.</p>
+
+                <menu class="o-stack" role="list">
+                    <li><button type="submit" class="button button--block">Guardar rutina</button></li>
+                    <li><button type="button" class="button button--secondary button--block">Guardar borrador</button></li>
+                    <li><a href="biblioteca.html" class="button button--secondary button--block">Cancelar</a></li>
+                </menu>
+
+                <p class="field__hint">Tu rutina se guardará en Biblioteca. Podrás editarla cuando quieras.</p>
+            </aside>
+        </form>
+    </section>
+</main>
+
+</body>
+</html>

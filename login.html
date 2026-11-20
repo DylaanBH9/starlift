@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>Iniciar sesión · Starlift</title>
+    <meta name="description" content="Accede a tus rutinas y continúa tu entrenamiento en Starlift.">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<header class="header o-container">
+    <a href="index.html" class="header__logo">STARLIFT</a>
+
+    <nav class="main-nav" aria-label="Principal">
+        <ul class="main-nav__list o-cluster" role="list">
+            <li><a href="index.html#caracteristicas" class="main-nav__link">Características</a></li>
+            <li><a href="comunidad.html" class="main-nav__link">Comunidades</a></li>
+            <li><a href="tracker.html" class="main-nav__link main-nav__link--muted">Gym Tracker</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="auth-layout o-container">
+    <section class="auth-layout__intro o-stack" aria-labelledby="auth-intro-heading">
+        <p class="hero__eyebrow">TU ENTRENAMIENTO, EN UN LUGAR</p>
+        <h1 class="hero__title" id="auth-intro-heading">Entrena sin dudas, comparte tu progreso.</h1>
+        <p class="hero__description">
+            Guarda tus rutinas, consulta las notas técnicas y lleva el seguimiento de cada serie.
+        </p>
+        <p class="auth-layout__pillars">Crea · Comparte · Entrena</p>
+    </section>
+
+    <section class="auth-card o-stack" aria-labelledby="auth-heading">
+        <header class="auth-card__header">
+            <h2 class="auth-card__title" id="auth-heading">Iniciar sesión</h2>
+            <p class="auth-card__subtitle">Accede a tus rutinas y continúa tu entrenamiento.</p>
+        </header>
+
+        <fieldset class="auth-card__mode o-stack">
+            <legend class="u-visually-hidden">Modo de acceso</legend>
+            <label class="slot">
+                <input class="slot__input" type="radio" name="auth-mode" value="login" checked>
+                Iniciar sesión · Seleccionado
+            </label>
+            <label class="slot">
+                <input class="slot__input" type="radio" name="auth-mode" value="register">
+                Registrarse
+            </label>
+        </fieldset>
+
+        <form action="comunidad.html" method="get" class="o-stack">
+            <p class="field">
+                <label class="field__label" for="email">Correo electrónico</label>
+                <input class="input" type="email" id="email" name="email" placeholder="correo@ejemplo.com" autocomplete="email" required>
+            </p>
+
+            <p class="field">
+                <label class="field__label" for="password">Contraseña</label>
+                <input class="input" type="password" id="password" name="password" autocomplete="current-password" required>
+            </p>
+
+            <label class="choice">
+                <input class="choice__control" type="checkbox" name="show-password">
+                Mostrar contraseña
+            </label>
+
+            <p class="field__hint">Usa el correo y la contraseña de tu cuenta.</p>
+
+            <button type="submit" class="button button--block">Iniciar sesión</button>
+        </form>
+
+        <footer class="auth-card__footer o-stack">
+            <a href="#" class="auth-card__forgot">¿Has olvidado tu contraseña?</a>
+            <p class="field__hint">Sin tarjetas de crédito. Acceso a tus rutinas.</p>
+        </footer>
+    </section>
+</main>
+
+<footer class="footer o-container">
+    <nav class="footer-nav" aria-label="Legal">
+        <ul class="footer-nav__list o-cluster" role="list">
+            <li><a href="#" class="footer-nav__link">Privacidad</a></li>
+            <li><a href="#" class="footer-nav__link">Términos</a></li>
+        </ul>
+    </nav>
+    <p class="footer__copyright">© 2026 StarLift. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>

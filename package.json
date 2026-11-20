@@ -1,0 +1,28 @@
+{
+  "name": "starlift",
+  "version": "1.0.0",
+  "description": "Aplicación web para el seguimiento de entrenamientos de fuerza e hipertrofia. Permite compartir rutinas con notas técnicas fijadas y ejecutar los entrenamientos sin distracciones.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "sass --watch scss/main.scss:css/main.css",
+    "build": "sass --style=compressed --no-source-map scss/main.scss:css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DylaanBH9/starlift.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/DylaanBH9/starlift/issues"
+  },
+  "homepage": "https://github.com/DylaanBH9/starlift#readme",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.15.0",
+    "globals": "^17.14.0",
+    "sass": "^1.108.2"
+  }
+}
