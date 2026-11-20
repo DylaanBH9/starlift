@@ -2,6 +2,8 @@
 
 Aplicación web para el seguimiento de entrenamientos de fuerza e hipertrofia. Permite compartir rutinas con notas técnicas fijadas y ejecutar los entrenamientos sin distracciones.
 
+- **Demo en GitHub Pages:** https://dylaanbh9.github.io/starlift/
+
 ---
 
 ## Enlaces de la Entrega (Órbita 1)
@@ -22,3 +24,33 @@ Aplicación web para el seguimiento de entrenamientos de fuerza e hipertrofia. P
 ## Estructura de la Documentación
 - [Brief Completo del Proyecto](BRIEF.md)
 - [Registro de Uso de IA](CHANGELOG.md)
+
+---
+
+## Planificación del Desarrollo SPA (JavaScript)
+
+### 1. Backlog del Proyecto (ordenado por prioridad)
+
+| Prioridad | Historia / Funcionalidad | Estado |
+| :--- | :--- | :--- |
+| 1 | **Estructura del proyecto, menú de navegación y datos base** (`datos.js`, `ui.js`, `main.js`) | Completado |
+| 2 | **Listado dinámico de rutinas** en la comunidad cruzando categorías y creadores | Completado |
+| 3 | **Vista de detalle de rutina** con ejercicios, series, repeticiones y notas técnicas fijadas | Completado |
+| 4 | **Filtrado y búsqueda en tiempo real** por tipo de entrenamiento, nivel y texto | Pendiente |
+| 5 | **Formulario de creación y edición de rutinas** con validación en cliente y ejercicios dinámicos | Pendiente |
+| 6 | **Persistencia local (`localStorage`)** para guardar rutinas propias y de la biblioteca | Pendiente |
+| 7 | **Modo Tracker interactivo** con cronómetro de sesión y progreso de series completadas | Pendiente |
+| 8 | **Sistema de reseñas y valoraciones** en la ficha de cada rutina | Pendiente |
+| 9 | **Simulación de autenticación** (inicio de sesión y registro con validación) | Pendiente |
+
+### 2. Mapa de Pantallas
+
+| Pantalla | Archivo | Propósito | Datos que muestra |
+| :--- | :--- | :--- | :--- |
+| **Portada (Landing)** | `index.html` | Presentación de la plataforma y acceso rápido | Propuesta de valor, vista previa del Tracker y rutinas destacadas |
+| **Comunidad (Listado)** | `comunidad.html` | Explorador principal de entrenamientos públicos | Listado de rutinas con categoría, nivel, creador, ejercicios resumidos y valoraciones |
+| **Detalle de Rutina** | `detalle-rutina.html` | Ficha técnica completa de una rutina seleccionada | Título, categoría, duración, autor, lista completa de ejercicios con series/reps/descanso/notas técnicas y reseñas |
+| **Crear Rutina** | `crear-rutina.html` | Constructor de nuevos entrenamientos | Formulario de metadatos (nombre, categoría, nivel, visibilidad) y bloques dinámicos de ejercicios |
+| **Mi Biblioteca** | `biblioteca.html` | Colección personal de rutinas creadas y guardadas | Rutinas propias y guardadas de la comunidad con acceso directo al Tracker |
+| **Modo Tracker** | `tracker.html` | Ejecución guiada del entrenamiento serie a serie | Ejercicio activo, nota técnica fijada, carga objetivo, cronómetro y barra de progreso |
+| **Acceso (Login/Registro)** | `login.html` | Entrada de usuarios a la plataforma | Formulario de inicio de sesión y registro con validación de credenciales |
