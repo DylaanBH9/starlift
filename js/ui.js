@@ -97,3 +97,100 @@ export function renderDetalleRutina(rutina, categorias) {
         listaEjercicios.append(li);
     });
 }
+
+export function mostrarError(campo, mensaje) {
+    const idError = `error-${campo.id}`;
+    const cajaError = document.getElementById(idError);
+    const pista = campo.dataset.pista || '';
+
+    if (mensaje) {
+        campo.setAttribute('aria-invalid', 'true');
+        campo.setAttribute('aria-describedby', [pista, idError].filter(Boolean).join(' '));
+        if (cajaError) cajaError.textContent = mensaje;
+    } else {
+        campo.removeAttribute('aria-invalid');
+        if (pista) campo.setAttribute('aria-describedby', pista);
+        else campo.removeAttribute('aria-describedby');
+        if (cajaError) cajaError.textContent = '';
+    }
+}
+
+export function renderUsuarios(usuarios, contenedor, contador) {
+    if (!contenedor) return;
+    contenedor.replaceChildren();
+    if (contador) contador.textContent = `${usuarios.length} usuarios registrados`;
+
+    usuarios.forEach((user) => {
+        const li = document.createElement('li');
+        const article = document.createElement('article');
+        article.className = 'card o-stack';
+
+        const titulo = document.createElement('h3');
+        titulo.className = 'card__title';
+        titulo.textContent = `@${user.usuario}`;
+
+        const info = document.createElement('p');
+        info.className = 'card__meta';
+        info.textContent = `${user.email} · Nacimiento: ${user.fechaNacimiento}`;
+
+        const acciones = document.createElement('p');
+        acciones.className = 'o-cluster';
+
+        const btnEditar = document.createElement('button');
+        btnEditar.type = 'button';
+        btnEditar.className = 'button button--secondary';
+        btnEditar.dataset.accion = 'editar';
+        btnEditar.dataset.id = user.id;
+        btnEditar.textContent = 'Editar';
+
+        const btnBorrar = document.createElement('button');
+        btnBorrar.type = 'button';
+        btnBorrar.className = 'button button--danger';
+        btnBorrar.dataset.accion = 'borrar';
+        btnBorrar.dataset.id = user.id;
+        btnBorrar.textContent = 'Borrar';
+
+        acciones.append(btnEditar, btnBorrar);
+        article.append(titulo, info, acciones);
+        li.append(article);
+        contenedor.append(li);
+    });
+}
+
+export function renderMensajes(mensajes, contenedor, contador) {
+    if (!contenedor) return;
+    contenedor.replaceChildren();
+    if (contador) contador.textContent = `${mensajes.length} mensajes enviados`;
+
+    mensajes.forEach((msg) => {
+        const li = document.createElement('li');
+        const article = document.createElement('article');
+        article.className = 'card o-stack';
+
+        const tag = document.createElement('p');
+        tag.className = 'card__tag';
+        tag.textContent = `${msg.motivoTexto} · ${msg.fechaEnvio}`;
+
+        const titulo = document.createElement('h3');
+        titulo.className = 'card__title';
+        titulo.textContent = `${msg.nombre} (${msg.email})`;
+
+        const texto = document.createElement('p');
+        texto.textContent = msg.mensaje;
+
+        const meta = document.createElement('p');
+        meta.className = 'card__meta';
+        meta.textContent = `${msg.telefono ? `Tel: ${msg.telefono}` : 'Sin teléfono'} · ${msg.prefiereLlamada ? 'Prefiere llamada' : 'Responder por correo'}`;
+
+        const btnBorrar = document.createElement('button');
+        btnBorrar.type = 'button';
+        btnBorrar.className = 'button button--danger';
+        btnBorrar.dataset.accion = 'borrar';
+        btnBorrar.dataset.id = msg.id;
+        btnBorrar.textContent = 'Borrar';
+
+        article.append(tag, titulo, texto, meta, btnBorrar);
+        li.append(article);
+        contenedor.append(li);
+    });
+}
