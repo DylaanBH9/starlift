@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>Soporte y Contacto · Starlift</title>
+    <meta name="description" content="Reporta incidencias con ejercicios, propón rutinas o contacta con el equipo de Starlift.">
+    <link rel="stylesheet" href="css/main.css">
+    <script type="module" src="js/main.js"></script>
+</head>
+<body>
+
+<header class="header o-container">
+    <a href="index.html" class="header__logo">STARLIFT</a>
+
+    <nav class="main-nav" aria-label="Principal">
+        <ul class="main-nav__list o-cluster" role="list">
+            <li><a href="index.html#caracteristicas" class="main-nav__link">Características</a></li>
+            <li><a href="comunidad.html" class="main-nav__link">Comunidades</a></li>
+            <li><a href="tracker.html" class="main-nav__link main-nav__link--muted">Gym Tracker</a></li>
+            <li><a href="contacto.html" class="main-nav__link">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="main o-container o-stack">
+    <nav aria-label="Volver">
+        <a href="comunidad.html" class="back-link">← Volver a la comunidad</a>
+    </nav>
+
+    <header class="page-header">
+        <h1>Soporte y reportar errores</h1>
+        <p class="page-header__subtitle">Informa de un fallo en una rutina, propón mejoras o solicita ayuda.</p>
+    </header>
+
+    <section class="detail-layout" aria-label="Formulario de contacto e historial">
+        <article class="detail-layout__primary card o-stack">
+            <h2>Enviar consulta o incidencia</h2>
+
+            <form id="form-contacto" class="o-stack" novalidate>
+                <p class="field">
+                    <label class="field__label" for="contacto-nombre">Nombre</label>
+                    <input class="input" type="text" id="contacto-nombre" name="nombre" placeholder="Tu nombre" required minlength="2" maxlength="60" autocomplete="name">
+                    <small id="error-contacto-nombre" class="form-error" aria-live="polite"></small>
+                </p>
+
+                <p class="field">
+                    <label class="field__label" for="contacto-email">Correo electrónico</label>
+                    <input class="input" type="email" id="contacto-email" name="email" placeholder="correo@ejemplo.com" required autocomplete="email">
+                    <small id="error-contacto-email" class="form-error" aria-live="polite"></small>
+                </p>
+
+                <p class="field">
+                    <label class="field__label" for="contacto-telefono">Teléfono (opcional)</label>
+                    <input class="input" type="tel" id="contacto-telefono" name="telefono" maxlength="15" autocomplete="tel" placeholder="612 345 678">
+                    <small id="error-contacto-telefono" class="form-error" aria-live="polite"></small>
+                </p>
+
+                <p class="field">
+                    <label class="choice" for="contacto-prefiere-llamada">
+                        <input class="choice__control" type="checkbox" id="contacto-prefiere-llamada" name="prefiereLlamada">
+                        Prefiero que me llaméis
+                    </label>
+                </p>
+
+                <p class="field">
+                    <label class="field__label" for="contacto-motivo">Motivo</label>
+                    <select class="input" id="contacto-motivo" name="motivo" required>
+                        <option value="">Selecciona una opción...</option>
+                        <option value="reportar-error">Reportar un error en la app o en una rutina</option>
+                        <option value="incidencia-ejercicio">Incidencia con un ejercicio o nota técnica</option>
+                        <option value="proponer-rutina">Proponer una rutina destacada</option>
+                        <option value="sugerencia">Sugerencia de mejora</option>
+                    </select>
+                    <small id="error-contacto-motivo" class="form-error" aria-live="polite"></small>
+                </p>
+
+                <p class="field">
+                    <label class="field__label" for="contacto-mensaje">Mensaje</label>
+                    <textarea class="input" id="contacto-mensaje" name="mensaje" rows="4" required minlength="20" maxlength="300" aria-describedby="contacto-contador" placeholder="Describe el error o tu consulta..."></textarea>
+                    <output id="contacto-contador" for="contacto-mensaje" class="field__hint">0 / 300 caracteres (mínimo 20)</output>
+                    <small id="error-contacto-mensaje" class="form-error" aria-live="polite"></small>
+                </p>
+
+                <button type="submit" class="button">Enviar mensaje</button>
+            </form>
+        </article>
+
+        <aside class="o-stack" aria-labelledby="titulo-mensajes">
+            <h2 id="titulo-mensajes">Mensajes enviados</h2>
+            <p id="mensajes-count" class="feed-results__count">0 mensajes enviados</p>
+            <ul id="mensajes-list" class="o-stack" role="list"></ul>
+        </aside>
+    </section>
+</main>
+
+<footer class="footer o-container">
+    <nav class="footer-nav" aria-label="Legal y soporte">
+        <ul class="footer-nav__list o-cluster" role="list">
+            <li><a href="#" class="footer-nav__link">Privacidad</a></li>
+            <li><a href="#" class="footer-nav__link">Términos</a></li>
+            <li><a href="contacto.html" class="footer-nav__link">Contacto</a></li>
+        </ul>
+    </nav>
+    <p class="footer__copyright">© 2026 StarLift. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>

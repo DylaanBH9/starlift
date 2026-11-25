@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
-    <title>Iniciar sesión · Starlift</title>
-    <meta name="description" content="Accede a tus rutinas y continúa tu entrenamiento en Starlift.">
+    <title>Acceso y Registro · Starlift</title>
+    <meta name="description" content="Inicia sesión o crea tu cuenta en Starlift.">
     <link rel="stylesheet" href="css/main.css">
     <script type="module" src="js/main.js"></script>
 </head>
@@ -19,75 +19,154 @@
             <li><a href="index.html#caracteristicas" class="main-nav__link">Características</a></li>
             <li><a href="comunidad.html" class="main-nav__link">Comunidades</a></li>
             <li><a href="tracker.html" class="main-nav__link main-nav__link--muted">Gym Tracker</a></li>
+            <li><a href="contacto.html" class="main-nav__link">Contacto</a></li>
         </ul>
     </nav>
 </header>
 
-<main class="auth-layout o-container">
-    <section class="auth-layout__intro o-stack" aria-labelledby="auth-intro-heading">
-        <p class="hero__eyebrow">TU ENTRENAMIENTO, EN UN LUGAR</p>
-        <h1 class="hero__title" id="auth-intro-heading">Entrena sin dudas, comparte tu progreso.</h1>
-        <p class="hero__description">
-            Guarda tus rutinas, consulta las notas técnicas y lleva el seguimiento de cada serie.
-        </p>
-        <p class="auth-layout__pillars">Crea · Comparte · Entrena</p>
+<main class="main o-container o-stack">
+    <section class="auth-layout">
+        <section class="auth-layout__intro o-stack" aria-labelledby="auth-intro-heading">
+            <p class="hero__eyebrow">TU ENTRENAMIENTO, EN UN LUGAR</p>
+            <h1 class="hero__title" id="auth-intro-heading">Entrena sin dudas, comparte tu progreso.</h1>
+            <p class="hero__description">
+                Guarda tus rutinas, consulta las notas técnicas y lleva el seguimiento de cada serie.
+            </p>
+            <p class="auth-layout__pillars">Crea · Comparte · Entrena</p>
+        </section>
+
+        <section class="auth-card o-stack" aria-labelledby="auth-heading">
+            <header class="auth-card__header">
+                <h2 class="auth-card__title" id="auth-heading">Iniciar sesión</h2>
+                <p class="auth-card__subtitle" id="auth-subtitle">Accede a tus rutinas y continúa tu entrenamiento.</p>
+            </header>
+
+            <fieldset class="auth-card__mode o-stack">
+                <legend class="u-visually-hidden">Modo de acceso</legend>
+                <label class="slot">
+                    <input class="slot__input" type="radio" name="auth-mode" value="login" checked>
+                    Iniciar sesión
+                </label>
+                <label class="slot">
+                    <input class="slot__input" type="radio" name="auth-mode" value="register">
+                    Registrarse
+                </label>
+            </fieldset>
+
+            <!-- FORMULARIO 1: INICIAR SESIÓN -->
+            <form id="form-login" class="o-stack" novalidate>
+                <p class="field">
+                    <label class="field__label" for="login-email">Correo electrónico</label>
+                    <input class="input" type="email" id="login-email" name="email" placeholder="correo@ejemplo.com" autocomplete="email" required>
+                    <small id="error-login-email" class="form-error" aria-live="polite"></small>
+                </p>
+
+                <p class="field">
+                    <label class="field__label" for="login-password">Contraseña</label>
+                    <input class="input" type="password" id="login-password" name="password" autocomplete="current-password" required minlength="8">
+                    <small id="error-login-password" class="form-error" aria-live="polite"></small>
+                </p>
+
+                <label class="choice" for="login-show-password">
+                    <input class="choice__control" type="checkbox" id="login-show-password">
+                    Mostrar contraseña
+                </label>
+
+                <button type="submit" class="button button--block">Iniciar sesión</button>
+            </form>
+
+            <!-- FORMULARIO 2: REGISTRO (HITO 2) -->
+            <form id="form-registro" class="o-stack" novalidate hidden>
+                <input type="hidden" id="reg-id" name="id">
+
+                <p class="field">
+                    <label class="field__label" for="reg-usuario">Nombre de usuario</label>
+                    <input class="input" type="text" id="reg-usuario" name="usuario" placeholder="ej. kevinbh" required minlength="3" maxlength="20" autocomplete="username">
+                    <small id="error-reg-usuario" class="form-error" aria-live="polite"></small>
+                </p>
+
+                <p class="field">
+                    <label class="field__label" for="reg-email">Correo electrónico</label>
+                    <input class="input" type="email" id="reg-email" name="email" placeholder="correo@ejemplo.com" required autocomplete="email">
+                    <small id="error-reg-email" class="form-error" aria-live="polite"></small>
+                </p>
+
+                <p class="field">
+                    <label class="field__label" for="reg-password">Contraseña</label>
+                    <input class="input" type="password" id="reg-password" name="password" required minlength="8" aria-describedby="hint-reg-password" autocomplete="new-password">
+                    <small id="hint-reg-password" class="field__hint">Mínimo 8 caracteres, una mayúscula y un número.</small>
+                    <small id="error-reg-password" class="form-error" aria-live="polite"></small>
+                </p>
+
+                <p class="field">
+                    <label class="field__label" for="reg-password-repeat">Repetir contraseña</label>
+                    <input class="input" type="password" id="reg-password-repeat" name="passwordRepeat" required minlength="8" autocomplete="new-password">
+                    <small id="error-reg-password-repeat" class="form-error" aria-live="polite"></small>
+                </p>
+
+                <label class="choice" for="reg-show-password">
+                    <input class="choice__control" type="checkbox" id="reg-show-password">
+                    Mostrar contraseñas
+                </label>
+
+                <p class="field">
+                    <label class="field__label" for="reg-fecha-nacimiento">Fecha de nacimiento</label>
+                    <input class="input" type="date" id="reg-fecha-nacimiento" name="fechaNacimiento" required min="1920-01-01">
+                    <small id="error-reg-fecha-nacimiento" class="form-error" aria-live="polite"></small>
+                </p>
+
+                <p class="field o-cluster">
+                    <label class="choice" for="reg-condiciones">
+                        <input class="choice__control" type="checkbox" id="reg-condiciones" name="condiciones" required>
+                        Acepto las condiciones de uso y privacidad.
+                    </label>
+                    <a href="#dialog-condiciones" id="abrir-condiciones" class="field__hint">Ver condiciones</a>
+                    <small id="error-reg-condiciones" class="form-error" aria-live="polite"></small>
+                </p>
+
+                <menu class="o-stack" role="list">
+                    <li><button type="submit" id="reg-btn-submit" class="button button--block">Registrarse</button></li>
+                    <li><button type="button" id="reg-btn-cancelar" class="button button--secondary button--block" hidden>Cancelar edición</button></li>
+                </menu>
+            </form>
+
+            <footer class="auth-card__footer o-stack">
+                <a href="comunidad.html" class="auth-card__forgot">Entrar directamente a la comunidad →</a>
+                <p class="field__hint">Sin tarjetas de crédito. Acceso a tus rutinas.</p>
+            </footer>
+        </section>
     </section>
 
-    <section class="auth-card o-stack" aria-labelledby="auth-heading">
-        <header class="auth-card__header">
-            <h2 class="auth-card__title" id="auth-heading">Iniciar sesión</h2>
-            <p class="auth-card__subtitle">Accede a tus rutinas y continúa tu entrenamiento.</p>
+    <section class="o-stack" aria-labelledby="titulo-usuarios">
+        <header class="page-header">
+            <h2 id="titulo-usuarios">Usuarios</h2>
+            <p id="usuarios-count" class="feed-results__count">0 usuarios registrados</p>
         </header>
-
-        <fieldset class="auth-card__mode o-stack">
-            <legend class="u-visually-hidden">Modo de acceso</legend>
-            <label class="slot">
-                <input class="slot__input" type="radio" name="auth-mode" value="login" checked>
-                Iniciar sesión · Seleccionado
-            </label>
-            <label class="slot">
-                <input class="slot__input" type="radio" name="auth-mode" value="register">
-                Registrarse
-            </label>
-        </fieldset>
-
-        <form action="comunidad.html" method="get" class="o-stack">
-            <p class="field">
-                <label class="field__label" for="email">Correo electrónico</label>
-                <input class="input" type="email" id="email" name="email" placeholder="correo@ejemplo.com" autocomplete="email" required>
-            </p>
-
-            <p class="field">
-                <label class="field__label" for="password">Contraseña</label>
-                <input class="input" type="password" id="password" name="password" autocomplete="current-password" required>
-            </p>
-
-            <label class="choice">
-                <input class="choice__control" type="checkbox" name="show-password">
-                Mostrar contraseña
-            </label>
-
-            <p class="field__hint">Usa el correo y la contraseña de tu cuenta.</p>
-
-            <button type="submit" class="button button--block">Iniciar sesión</button>
-        </form>
-
-        <footer class="auth-card__footer o-stack">
-            <a href="#" class="auth-card__forgot">¿Has olvidado tu contraseña?</a>
-            <p class="field__hint">Sin tarjetas de crédito. Acceso a tus rutinas.</p>
-        </footer>
+        <ul id="usuarios-list" class="o-grid" role="list"></ul>
     </section>
 </main>
 
 <footer class="footer o-container">
-    <nav class="footer-nav" aria-label="Legal">
+    <nav class="footer-nav" aria-label="Legal y soporte">
         <ul class="footer-nav__list o-cluster" role="list">
             <li><a href="#" class="footer-nav__link">Privacidad</a></li>
             <li><a href="#" class="footer-nav__link">Términos</a></li>
+            <li><a href="contacto.html" class="footer-nav__link">Contacto</a></li>
         </ul>
     </nav>
     <p class="footer__copyright">© 2026 StarLift. Todos los derechos reservados.</p>
 </footer>
+
+<dialog id="dialog-condiciones" class="card o-stack" aria-labelledby="titulo-condiciones">
+    <h2 id="titulo-condiciones">Condiciones de uso y privacidad</h2>
+    <p class="field__hint">
+        StarLift guarda tu nombre de usuario, correo y fecha de nacimiento en el almacenamiento local de tu navegador (localStorage) para gestionar tus perfiles de entrenamiento.
+    </p>
+    <p class="field__hint">
+        Por seguridad, tu contraseña nunca se almacena en el navegador ni se comparte con terceros. Debes tener al menos 16 años para registrarte.
+    </p>
+    <button type="button" id="cerrar-condiciones" class="button button--block">Entendido</button>
+</dialog>
 
 </body>
 </html>
